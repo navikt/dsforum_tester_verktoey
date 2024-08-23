@@ -1,0 +1,1 @@
+- For å formatere koden -> ruff format.

@@ -1,0 +1,43 @@
+[project]
+name = "dataseksjonen-ansatt"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = ["ruff>=0.6.2", "pytest>=8.3.2"]
+
+
+[tool.ruff]
+select = ["ALL"]
+
+ignore = [
+    "S101",
+    "D100", # Ignorerer manglende docstrings i moduler
+    "D103", # Ignorerer manglende docstrings i funksjoner
+
+    # Man må visst velge mellom noen av disse
+    "D203", # Ingen tom linje før docstring i klasser
+    "D213", # Ingen linjeskift før docstring i metoder
+
+    # Kræsjer med formatering: https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    "W191",
+    "E111",
+    "E117",
+    "D206",
+    "D300",
+    "Q000",
+    "Q001",
+    "Q002",
+    "Q003",
+    "COM812",
+    "COM819",
+    "ISC001",
+    "ISC002",
+]
